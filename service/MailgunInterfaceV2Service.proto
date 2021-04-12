@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package innovation_upstream.service.mailgun_interface;
+
+option go_package = "gitlab.innovationup.stream/innovation-upstream/service/mailgun-interface/pb";
+
+import "google/protobuf/empty.proto";
+
+service MailgunInterfaceRPC {
+  rpc SendEmails (SendEmailsRequest) returns (google.protobuf.Empty);
+}
+
+message Email {
+  string to = 1;
+  string template = 2;
+  map<string, string> template_data = 3;
+  string subject = 4;
+}
+
+message SendEmailsRequest {
+  repeated Email emails = 1;
+}
