@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package innovation_upstream.service.mailgun_interface;
 
-option go_package = "gitlab.innovationup.stream/innovation-upstream/service/mailgun-interface/pb";
+option go_package = "gitlab.innovationup.stream/innovation-upstream/common-proto/service/mailgun-interface/pb";
 
 import "google/protobuf/empty.proto";
 
